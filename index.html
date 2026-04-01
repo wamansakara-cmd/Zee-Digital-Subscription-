@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZEE DIGITAL SUBSCRIPTION</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>ZEE DIGITAL SUBSCRIPTION</h1>
+  <p>By ZEE Ab</p>
+</header>
+
+<section class="login">
+  <button onclick="login()">Login with Pi</button>
+  <p id="user"></p>
+</section>
+
+<section class="upload">
+  <h2>📢 Post Advert</h2>
+
+  <input type="file" id="imageInput" accept="image/*"><br><br>
+  <input type="text" id="titleInput" placeholder="Product Title"><br><br>
+  <input type="number" id="priceInput" placeholder="Price in Pi"><br><br>
+
+  <button onclick="postAd()">Post Advert</button>
+</section>
+
+<section class="products" id="products"></section>
+
+<section class="cart">
+  <h2>🛒 Cart</h2>
+  <div id="cartItems"></div>
+  <h3 id="total">Total: 0 Pi</h3>
+  <button onclick="checkout()">Checkout</button>
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
